@@ -1,4 +1,4 @@
-const {Cricle, Square, Triangle} = require ("./shapes")
+const {Cricle, Square, Triangle} = require("./shapes").default
 //circle shape
 describe('Cricle', () => {
     test('render correctly', () => {
