@@ -2,18 +2,17 @@ const questions = [
     {
         type: "input",
         name: "text",
-        message: "TEXT: Enter either Tri, Cir or Squ:",
+        message: "TEXT: Enter up to (3) Characters:",
     },
     {
         type: "input",
         name: "text-color",
-        message: "TEXT COLOR: Enter a color keyword:",
+        message: "TEXT COLOR: Enter a color keyword (Or hexadecimal number):",
     },
     {
         type: 'list',
         name: 'shape',
-        message: 'Choose a shape:',
-        choices: ['Circle', 'Triangle', 'Square'],
+        message: "SHAPE COLOR: Enter a color keyword (OR a hexadecimal number):",
     },
     {
         type: "list",
