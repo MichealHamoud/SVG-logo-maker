@@ -1,8 +1,8 @@
-const {Cricle, Square, Triangle} = require("./shapes").default
+const {Circle, Square, Triangle} = require("./shapes").default
 //circle shape
-describe('Cricle', () => {
+describe('Circle', () => {
     test('render correctly', () => {
-        const shape = new Cricle();
+        const shape = new Circle();
         let color =('green')
         shape.setColor(color);
         expect(shape.render()).toEqual(`<circle cx="150" cy="100" r="80" fill="${color}">`);

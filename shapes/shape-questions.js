@@ -3,6 +3,10 @@ const questions = [
         type: "input",
         name: "text",
         message: "TEXT: Enter up to (3) Characters:",
+        validate:(value) =>
+        value.length >= 3
+        ? true
+        : "Text Must Contain 3 letters.",
     },
     {
         type: "input",
@@ -16,9 +20,15 @@ const questions = [
     },
     {
         type: "list",
-        name: "pixel-image",
-        message: "Choose which Pixel Image you would like?",
+        name: "shape",
+        message: "Choose which Shape Image you would like?",
         choices: ["Circle", "Square", "Triangle"],
+    },
+    {
+        type: 'input',
+        name: 'filename',
+        message: 'please enter the name of the file to save the logo',
+        default: 'logo',
     },
 ];
 
