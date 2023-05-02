@@ -1,6 +1,6 @@
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
 		<circle cx="150" cy="100" fill="purple" />
 		<text x="150" y="110" fill="black" text-anchor="middle" font-size="30">
-		  mik
+		
 		</text>
 	  </svg>

@@ -3,10 +3,8 @@ const inquirer = require('inquirer');
 const {SVG} = require('./SVG');
 const {Circle, Square, Triangle} = require('./shapes/shapes');
 const fs = require('fs');
-
 const createShape = (shape, shapeColor, text, textColor) => {
     let shapeSVG = [];
-
     switch (shape) {
     case 'circle':
         shapeSVG = new Circle();
@@ -18,23 +16,22 @@ const createShape = (shape, shapeColor, text, textColor) => {
         shapeSVG = new Square();
         break;
     }
+    shapeSVG.setColor(shapeColor);
 
-    //shapeSVG.setColor(shapeColor);
+    const textSVG = new Text(text, textColor);
 
-    //const textSVG = new Text(text, textColor);
-
-    const svg = new SVG(text, shapeSVG);
+    const svg = new SVG(textSVG, shapeSVG);
 
     return svg.render();
 }
 
-return inquirer.prompt(questions).then((answers) => {
+inquirer.prompt(questions).then((answers) => {
 
     const {shape, shapeColor, text, textColor} = answers;
 
     const svg = createShape(shape, shapeColor, text, textColor);
-    
-    fs.writeFileSync('example.svg', svg);
+
+    fs.writeFileSync('logo.svg', svg);
 
     console.log('Generated logo.svg');
 });
