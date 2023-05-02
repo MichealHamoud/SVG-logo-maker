@@ -9,14 +9,16 @@ const questions = [
         : "Text Must Contain 3 letters.",
     },
     {
-        type: "input",
-        name: "text-color",
+        type: "choice",
+        name: "textColor",
         message: "TEXT COLOR: Enter a color keyword (Or hexadecimal number):",
+        default: "#000000"
     },
     {
-        type: 'list',
-        name: 'shape',
+        type: "choice",
+        name: 'shapeColor',
         message: "SHAPE COLOR: Enter a color keyword (OR a hexadecimal number):",
+        default: "#ffffff"
     },
     {
         type: "list",
@@ -25,7 +27,7 @@ const questions = [
         choices: ["Circle", "Square", "Triangle"],
     },
     {
-        type: 'input',
+        type: "input",
         name: 'filename',
         message: 'please enter the name of the file to save the logo',
         default: 'logo',

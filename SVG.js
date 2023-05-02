@@ -1,5 +1,3 @@
-const inquirer = require('inquirer');
-
 class SVG{
     constructor(){
         this.text = text,
@@ -23,4 +21,4 @@ class SVG{
 }
 
 
-module.exports = SVG
+module.exports = {SVG}

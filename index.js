@@ -1,31 +1,40 @@
 const questions = require('./shapes/shape-questions');
-const SVG = require('SVG');
+const inquirer = require('inquirer');
+const {SVG} = require('./SVG');
 const {Circle, Square, Triangle} = require('./shapes/shapes');
 const fs = require('fs');
 
-const {text, shape, textColor, shapeColor, filename} = answer;
+const createShape = (shape, shapeColor, text, textColor) => {
+    let shapeSVG = [];
 
-let logo;
     switch (shape) {
-        case 'Circle':
-            logo = new Circle(text, textColor, shapeColor);
-            break;
-        case 'Square':
-            logo = new Square(text, textColor, shapeColor);
-            break;
-        case 'Triangle':
-            logo = new Triangle(text, textColor, shapeColor);
-            break;
-        default:
-            throw new Error('Invalid shape');
+    case 'circle':
+        shapeSVG = new Circle();
+        break;
+    case 'triangle':
+        shapeSVG = new Triangle();
+        break;
+    case 'square':
+        shapeSVG = new Square();
+        break;
     }
 
-const logoCode = log.render();
+    shapeSVG.setColor(shapeColor);
 
-const outputPath = path.join('./', `${filename}.svg`);
+    const textSVG = new Text(text, textColor);
 
-await writeFile(outputPath, logoCode);
-console.log('Created SVG logo');
-{
-    console.error(error);
+    const svg = new SVG(text, shapeSVG);
+
+    return svg.render();
 }
+
+return inquirer.prompt(questions).then((answers) => {
+
+    const {shape, shapeColor, text, textColor} = answers;
+
+    const svg = createShape(shape, shapeColor, text, textColor);
+    
+    fs.writeFileSync('logo.svg', svg);
+
+    console.log('Generated logo.svg');
+});

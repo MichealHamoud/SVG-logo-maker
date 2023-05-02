@@ -1,5 +1,4 @@
-const SVG = require('./index');
-const inquirer = require('inquirer');
+const {SVG} = require('../SVG');
 
 class Square extends SVG {
     constructor(text, textColor, shapeColor) {

@@ -1,4 +1,4 @@
-const {Circle, Square, Triangle} = require("./shapes").default
+const {Circle, Square, Triangle} = require("./shapes");
 //circle shape
 describe('Circle', () => {
     test('render correctly', () => {
@@ -26,3 +26,4 @@ describe('triangle', () => {
         expect(shape.render()).toEqual(`<polygon points="150, 18 244, 182 56, 182" fill="${color}">`);
     });
 });
+
