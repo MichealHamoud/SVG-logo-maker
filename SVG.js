@@ -1,9 +1,9 @@
 class SVG{
-    constructor(){
-        this.text = text,
-        this.shape = shape,
-		this.textColor = textColor,
-		this.shapeColor = shapeColor
+    constructor(text, shape, shapeColor, textColor){
+        this.text = text;
+        this.shape = shape;
+		this.textColor = textColor;
+		this.shapeColor = shapeColor;
 
 		if (text.length < 3) {
 			console.error(err('Must contain at least 3 letters.'));

@@ -19,9 +19,9 @@ const createShape = (shape, shapeColor, text, textColor) => {
         break;
     }
 
-    shapeSVG.setColor(shapeColor);
+    //shapeSVG.setColor(shapeColor);
 
-    const textSVG = new Text(text, textColor);
+    //const textSVG = new Text(text, textColor);
 
     const svg = new SVG(text, shapeSVG);
 
@@ -34,7 +34,7 @@ return inquirer.prompt(questions).then((answers) => {
 
     const svg = createShape(shape, shapeColor, text, textColor);
     
-    fs.writeFileSync('logo.svg', svg);
+    fs.writeFileSync('example.svg', svg);
 
     console.log('Generated logo.svg');
 });
