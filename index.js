@@ -1,37 +1,75 @@
-const questions = require('./shapes/shape-questions');
-const inquirer = require('inquirer');
-const {SVG} = require('./SVG');
-const {Circle, Square, Triangle} = require('./shapes/shapes');
-const fs = require('fs');
-const createShape = (shape, shapeColor, text, textColor) => {
-    let shapeSVG = [];
-    switch (shape) {
-    case 'circle':
-        shapeSVG = new Circle();
+const fs = require("fs");
+const inquirer = require("inquirer");
+const { Shapes, Circle, Polygon, Square } = require("./main/lib/shapes");
+const questions = require("./main/lib/questions");
+
+// intialising function using switch method
+
+const init = () => {
+  inquirer.prompt(questions).then((data) => {
+    console.log("Creating svg file...");
+    switch (`${data.shape}`) {
+      case "Square":
+        console.log("Square is being Created....");
+        const square = new Square(
+          data.fill,
+          data.stroke,
+          data.strokeWidth,
+          data.text,
+          data.textColor,
+          data.width,
+          data.width
+        );
+        fs.writeFile("main/output/logo.svg", square.renderSquare(), (err) => {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log("Congratulations!!! Square is now created!!");
+          }
+        });
         break;
-    case 'triangle':
-        shapeSVG = new Triangle();
+      case "Circle":
+        console.log("Circle is being Created....");
+        const circle = new Circle(
+          data.fill,
+          data.stroke,
+          data.strokeWidth,
+          data.textColor,
+          data.text,
+          data.radius
+        );
+        fs.writeFile("main/output/logo.svg", circle.renderCircle(), (err) => {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log("Congratulations!!! Circle is now created!!");
+          }
+        });
         break;
-    case 'square':
-        shapeSVG = new Square();
+      case "Triangle":
+        console.log("Triangle is being Created....");
+        const triangle = new Polygon(
+          data.fill,
+          data.stroke,
+          data.strokeWidth,
+          data.text,
+          data.textColor
+        );
+        fs.writeFile(
+          "main/output/logo.svg",
+          triangle.renderPolygon(),
+          (err) => {
+            if (err) {
+              console.error(err);
+            } else {
+              console.log("Congratulations!!! Triangle is  now created!!");
+            }
+          }
+        );
         break;
     }
-    shapeSVG.setColor(shapeColor);
+  });
+};
+// Initialising app
 
-    const textSVG = new Text(text, textColor);
-
-    const svg = new SVG(textSVG, shapeSVG);
-
-    return svg.render();
-}
-
-inquirer.prompt(questions).then((answers) => {
-
-    const {shape, shapeColor, text, textColor} = answers;
-
-    const svg = createShape(shape, shapeColor, text, textColor);
-
-    fs.writeFileSync('logo.svg', svg);
-
-    console.log('Generated logo.svg');
-});
+init();
