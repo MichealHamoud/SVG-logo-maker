@@ -1,6 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const { Shapes, Circle, Polygon, Square } = require("./main/lib/shapes");
+const { Shapes, Circle, Polygon, Square } = require("./main/lib/shapes.js");
 const questions = require("./main/lib/questions");
 
 // intialising function using switch method
