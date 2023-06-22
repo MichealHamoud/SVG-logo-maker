@@ -33,13 +33,13 @@ Now you can run the following command.
 
 You will be asked a few questions about your project.
 
-`"What text do you want inside the shape(enter upto 3 characters)" `
-` "What should be the colour of the text?(enter name of the colour or color hashtag)" `
-` "What background colour you want the shape to have?(enter name of the colour or color hashtag)" `
-` "What color of shape boundary should be?(enter name of the colour or color hashtag)" `
-` "How thick the border be?(choose a value between 1-5)" `
-` "Radius of circle?(choose a value between 50-200)" `
-` "How wide square should be?(choose a value between 100-400)" `
+- `"What text do you want inside the shape(enter upto 3 characters)" `
+- ` "What should be the colour of the text?(enter name of the colour or color hashtag)" `
+- ` "What background colour you want the shape to have?(enter name of the colour or color hashtag)" `
+- ` "What color of shape boundary should be?(enter name of the colour or color hashtag)" `
+- ` "How thick the border be?(choose a value between 1-5)" `
+- ` "Radius of circle?(choose a value between 50-200)" `
+- ` "How wide square should be?(choose a value between 100-400)" `
 
 Once all questions have been answered the README.md file will be generated.
 
@@ -48,7 +48,8 @@ Please refer to section above about the usage.
 
 You can also refer to the following video for a demonstration of the project.
 
-<video src="readme%20file.mp4" controls title="Title"></video>
+https://github.com/MichealHamoud/SVG-logo-maker/assets/123305537/a411d7bf-5af3-43a8-8402-4cdf9a7be00c
+
 
 ## Tests
 TBA
