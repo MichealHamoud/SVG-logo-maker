@@ -1,21 +1,62 @@
-User Story
+# Professional README file generator
+![Github license](https://img.shields.io/badge/license-MIT-blue)
+## Table of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contribute](#contribute)
+* [Contributors](#contributors)
+* [Testing](#tests)
+* [License](#license)
+* [Questions](#questions)
+## Description
+This app is a professional readme file generator. This is designed to help developers to quickly create a professional  README file for their projects. It is a fun way of creating a README file.
 
 
-AS a freelance web developer
-I WANT to generate a simple logo for my projects
-SO THAT I don't have to pay a graphic designer
-Acceptance Criteria
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for text
-THEN I can enter up to three characters
-WHEN I am prompted for the text color
-THEN I can enter a color keyword (OR a hexadecimal number)
-WHEN I am prompted for a shape
-THEN I am presented with a list of shapes to choose from: circle, triangle, and square
-WHEN I am prompted for the shape's color
-THEN I can enter a color keyword (OR a hexadecimal number)
-WHEN I have entered input for all the prompts
-THEN an SVG file is created named `logo.svg`
-AND the output text "Generated logo.svg" is printed in the command line
-WHEN I open the `logo.svg` file in a browser
-THEN I am shown a 300x200 pixel image that matches the criteria I entered
+## Installation
+Go to the github repository and clone the project into a local directory at your computer.
+
+https://github.com/MichealHamoud/Professional-REAME-generator
+
+Before you can start using the app, please ensure you have package.json in your folder. 
+
+Now run the following command in terminal to install dependencies you need for the project.
+` npm i inquirer@8.2.4`
+
+If you do not find the package.json file, please run the following commands on your terminal.
+`npm init`
+
+After you have run this command, package-lock.json file and node modules folder will be created.
+
+Now you can run the following command.
+`node index.js`
+
+You will be asked a few questions about your project.
+
+`"What text do you want inside the shape(enter upto 3 characters)" `
+` "What should be the colour of the text?(enter name of the colour or color hashtag)" `
+` "What background colour you want the shape to have?(enter name of the colour or color hashtag)" `
+` "What color of shape boundary should be?(enter name of the colour or color hashtag)" `
+` "How thick the border be?(choose a value between 1-5)" `
+` "Radius of circle?(choose a value between 50-200)" `
+` "How wide square should be?(choose a value between 100-400)" `
+
+Once all questions have been answered the README.md file will be generated.
+
+## Usage
+Please refer to section above about the usage.
+
+You can also refer to the following video for a demonstration of the project.
+
+<video src="readme%20file.mp4" controls title="Title"></video>
+
+## Tests
+TBA
+## License
+This project is created under MIT license.
+
+Users of software using an MIT License are permitted to use, copy, modify, merge publish, distribute, sublicense and sell copies of the software
+
+
+## Questions
+If you have any questions or suggestions please [contact] [github/MichealHamoud](https://github.com/MichealHamoud)
